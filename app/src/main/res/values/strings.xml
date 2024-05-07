@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AllaskeresoPortal</string>
+    <string name="allaskereso_portal">Álláskereső portál</string>
+    <string name="bejelentkezes">Bejelentkezés</string>
+    <string name="regisztracio">Regisztráció</string>
+    <string name="jelszo">Jelszó</string>
+    <string name="felhasznalonev">Felhasználónév</string>
+    <string name="jelszo_megerositese">Jelszó megerősítése</string>
+    <string name="vissza">Vissza</string>
+    <string name="email">Email</string>
+    <string name="bejelentkezes_vendegkent">Bejelentkezés vendégként</string>
+    <string name="google_bejelentkezes">Google bejelentkezés</string>
+    <string name="allas_feladasa">Állás feladása</string>
+    <string name="profil">Profil</string>
+    <string name="beallitasok">Beállítások</string>
+    <string name="kijelentkezes">Kijelentkezés</string>
+</resources>

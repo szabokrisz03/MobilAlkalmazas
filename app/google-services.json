@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "802563718955",
+    "project_id": "androidjob-96104",
+    "storage_bucket": "androidjob-96104.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802563718955:android:c99d183c5858fd94bbcf6e",
+        "android_client_info": {
+          "package_name": "com.example.allaskeresoportal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTLAgmdym61uXNJlUnXubOZfwP4d7OIOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

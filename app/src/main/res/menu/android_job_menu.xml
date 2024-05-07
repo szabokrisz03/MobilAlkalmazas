@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/addJobId"
+        android:title="@string/allas_feladasa"
+        android:icon="@drawable/ic__add"
+        app:showAsAction="ifRoom"
+        app:actionViewClass="android.widget.Button"
+        />
+
+    <item
+        android:id="@+id/profileId"
+        android:title="@string/profil"
+        android:icon="@drawable/ic_accessibility"
+        app:showAsAction="ifRoom"
+        app:actionViewClass="android.widget.Button"
+        />
+
+    <item
+        android:id="@+id/settingsId"
+        android:title="@string/beallitasok"
+        app:showAsAction="never"
+        app:actionViewClass="android.widget.Button"
+        />
+
+    <item
+        android:id="@+id/logoutId"
+        android:title="@string/kijelentkezes"
+        app:showAsAction="never"
+        app:actionViewClass="android.widget.Button"
+        />
+</menu>
