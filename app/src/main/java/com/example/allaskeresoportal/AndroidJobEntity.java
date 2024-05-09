@@ -5,46 +5,45 @@ public class AndroidJobEntity {
     private String createdBy;
     private String createdDate;
     private int payment;
+    private String shortDesc;
+    private String longDesc;
 
     public AndroidJobEntity() {
     }
 
-    public AndroidJobEntity(String name, String createdBy, String createdDate, int payment) {
+    public AndroidJobEntity(String name, String createdBy, String createdDate, int payment, String shortDesc, String longDesc) {
         this.name = name;
         this.createdBy = createdBy;
         this.createdDate = createdDate;
         this.payment = payment;
+        this.shortDesc = shortDesc;
+        this.longDesc = longDesc;
+    }
+
+    public String getShortDesc() {
+        return shortDesc;
+    }
+
+    public String getLongDesc() {
+        return longDesc;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getCreatedBy() {
         return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
     }
 
     public String getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(String createdDate) {
-        this.createdDate = createdDate;
-    }
 
     public int getPayment() {
         return payment;
     }
 
-    public void setPayment(int payment) {
-        this.payment = payment;
-    }
 }

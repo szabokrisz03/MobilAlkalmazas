@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/addJobId"
+        android:id="@+id/searchJobId"
+        android:title="@string/allas_kereses"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView"
+        />
+
+    <item
+        android:id="@+id/addJobButton"
         android:title="@string/allas_feladasa"
         android:icon="@drawable/ic__add"
         app:showAsAction="ifRoom"
-        app:actionViewClass="android.widget.Button"
         />
 
     <item
-        android:id="@+id/profileId"
-        android:title="@string/profil"
-        android:icon="@drawable/ic_accessibility"
-        app:showAsAction="ifRoom"
-        app:actionViewClass="android.widget.Button"
-        />
-
-    <item
-        android:id="@+id/settingsId"
+        android:id="@+id/settingsButton"
         android:title="@string/beallitasok"
         app:showAsAction="never"
-        app:actionViewClass="android.widget.Button"
         />
 
     <item
-        android:id="@+id/logoutId"
+        android:id="@+id/logoutButton"
         android:title="@string/kijelentkezes"
         app:showAsAction="never"
         app:actionViewClass="android.widget.Button"

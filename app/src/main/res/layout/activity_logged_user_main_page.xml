@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoggedUserMainPage">
+    tools:context=".LoggedUserMainPage"
+    android:id="@+id/logged_main_page">
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/androidJobRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

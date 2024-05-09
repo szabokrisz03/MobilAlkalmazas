@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
         String email = EmailAddressTextView.getText().toString();
 
         if(!password.equals(passwordConfirm)) {
-            //TODO: alert
+            Snackbar.make(findViewById(R.id.register_page), "A jelszavak nem egyeznek", Snackbar.LENGTH_LONG).show();
         }
 
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -58,7 +59,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(task.isSuccessful()) {
                     goToLoggedUserMainPage();
                 } else {
-                    //TODO: alert
+                    Snackbar.make(findViewById(R.id.register_page), "Hiba a regisztráció során", Snackbar.LENGTH_LONG).show();
                 }
             }
         });

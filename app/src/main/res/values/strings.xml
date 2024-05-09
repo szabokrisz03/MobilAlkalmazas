@@ -14,4 +14,12 @@
     <string name="profil">Profil</string>
     <string name="beallitasok">Beállítások</string>
     <string name="kijelentkezes">Kijelentkezés</string>
+    <string name="reszletek">Részletek</string>
+    <string name="allas_kereses">Állás keresés</string>
+    <string name="allas_hozzaadasa">Állás hozzáadása</string>
+    <string name="allas_megnevezese">Állás megnevezése</string>
+    <string name="rovid_leiras">Rövid leírás</string>
+    <string name="hosszu_leiras">Hosszú leírás</string>
+    <string name="fizetes">Fizetés</string>
+    <string name="per_ora">/óra</string>
 </resources>
