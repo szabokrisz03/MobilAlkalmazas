@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -28,6 +30,7 @@ public class AddJobActivity extends AppCompatActivity {
     private EditText addJobShortDescTextView;
     private EditText addJobLongDescTextView;
 
+    private AndroidJobScheduler androidJobScheduler;
     private AndroidJobAdapter androidJobAdapter;
     private String loggedUserEmail;
     private FirebaseFirestore database;
@@ -36,6 +39,7 @@ public class AddJobActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_job);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.blink);
 
         loggedUserEmail = getIntent().getStringExtra("LOGGEDUSEREMAIL");
         if(!Objects.equals(loggedUserEmail, "")) {
@@ -50,8 +54,15 @@ public class AddJobActivity extends AppCompatActivity {
         addJobShortDescTextView = findViewById(R.id.addJobShortDescTextView);
         addJobLongDescTextView = findViewById(R.id.addJobLongDescTextView);
 
+        addJobNameTextView.startAnimation(animation);
+        addJobPaymentTextView.startAnimation(animation);
+        addJobShortDescTextView.startAnimation(animation);
+        addJobLongDescTextView.startAnimation(animation);
+
         database = FirebaseFirestore.getInstance();
         databaseItems = database.collection("Jobs");
+
+        androidJobScheduler = new AndroidJobScheduler(this);
     }
 
     public void addJobToDatabase(View view) {
@@ -92,6 +103,7 @@ public class AddJobActivity extends AppCompatActivity {
             );
 
             databaseItems.add(current);
+            androidJobScheduler.send(jobName);
             Intent intent = new Intent(this, LoggedUserMainPage.class);
             startActivity(intent);
         } catch (Exception e) {

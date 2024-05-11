@@ -53,14 +53,11 @@ public class RegisterActivity extends AppCompatActivity {
             Snackbar.make(findViewById(R.id.register_page), "A jelszavak nem egyeznek", Snackbar.LENGTH_LONG).show();
         }
 
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()) {
-                    goToLoggedUserMainPage();
-                } else {
-                    Snackbar.make(findViewById(R.id.register_page), "Hiba a regisztráció során", Snackbar.LENGTH_LONG).show();
-                }
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
+            if(task.isSuccessful()) {
+                goToLoggedUserMainPage();
+            } else {
+                Snackbar.make(findViewById(R.id.register_page), "Hiba a regisztráció során", Snackbar.LENGTH_LONG).show();
             }
         });
 
