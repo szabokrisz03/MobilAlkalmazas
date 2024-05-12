@@ -18,15 +18,10 @@
         />
 
     <item
-        android:id="@+id/settingsButton"
-        android:title="@string/beallitasok"
-        app:showAsAction="never"
-        />
-
-    <item
         android:id="@+id/logoutButton"
         android:title="@string/kijelentkezes"
-        app:showAsAction="never"
+        android:icon="@drawable/baseline_logout_24"
+        app:showAsAction="ifRoom"
         app:actionViewClass="android.widget.Button"
         />
 </menu>
